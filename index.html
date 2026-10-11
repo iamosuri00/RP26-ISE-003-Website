@@ -3,111 +3,986 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bussync - Bus System</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="BusSync - Intelligent Multimedia Content Delivery Device For Enhancing Passenger Experience In Intercity Buses. Sri Lanka Institute of Information Technology (SLIIT) Research.">
+    <title>BusSync | Intelligent Multimedia Transit Delivery Device</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=20261011_04">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>bussync Bus System</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+
+    <!-- ─── NAVIGATION BAR (OptiTech Format) ─────────────────────────────────── -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-inner">
+            <a href="#Home" class="nav-brand">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="6" width="18" height="12" rx="2"></rect>
+                    <circle cx="7" cy="18" r="2"></circle>
+                    <circle cx="17" cy="18" r="2"></circle>
+                    <path d="M7 6v4m10-4v4M3 11h18"></path>
+                </svg>
+                BusSync
+            </a>
+
+            <!-- Desktop Links -->
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="#Home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item nav-dropdown">
+                    <a href="#Domain" class="dropdown-trigger">
+                        Domain
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#Literature">Literature Survey</a></li>
+                        <li class="dropdown-item"><a href="#Problem">Research Problem</a></li>
+                        <li class="dropdown-item"><a href="#Gap">Research Gap</a></li>
+                        <li class="dropdown-item"><a href="#Objectives">Research Objectives</a></li>
+                        <li class="dropdown-item"><a href="#Methodology">Methodology</a></li>
+                        <li class="dropdown-item"><a href="#Technologies">Technologies Used</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#Milestones" class="nav-link">Milestones</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Documents" class="nav-link">Documents</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Presentations" class="nav-link">Presentations</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#About" class="nav-link">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Contact" class="nav-link">Contact us</a>
+                </li>
+            </ul>
+
+            <!-- Mobile Hamburger Button -->
+            <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
         </div>
-    </header>
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Welcome to bussync Bus System</h2>
-            <p>Efficient, reliable, and smart bus management for your city.</p>
-            <a href="#features" class="btn">Learn More</a>
-            <div class="tabs">
-                <div class="tab-buttons">
-                    <button class="tab-btn active" onclick="showTab('literature')">Literature Review</button>
-                    <button class="tab-btn" onclick="showTab('methodology')">Methodologies</button>
-                </div>
-                <div class="tab-content">
-                    <div id="literature" class="tab-card" style="display:block;">
-                        <h3>Literature Review</h3>
-                        <p>
-                            The integration of smart technologies in public transportation has been widely studied to improve efficiency, reliability, and user experience. According to Smith et al. (2022), real-time tracking and route optimization significantly reduce passenger wait times and operational costs. Mobile ticketing, as discussed by Lee and Kumar (2021), enhances convenience and reduces cash handling, while analytics-driven systems enable data-informed decision-making for transit authorities (Zhang & Chen, 2020). However, challenges remain in system interoperability, data privacy, and user adoption, which must be addressed for successful implementation.
-                        </p>
-                        <ul>
-                            <li>Smith, J., Brown, A., & Patel, R. (2022). Smart Transit Systems: A Review. <i>Journal of Urban Transport</i>, 18(3), 145-160.</li>
-                            <li>Lee, S., & Kumar, P. (2021). Mobile Ticketing in Public Transport. <i>Transport Technology Today</i>, 12(2), 88-97.</li>
-                            <li>Zhang, L., & Chen, Y. (2020). Data Analytics for Urban Mobility. <i>Smart Cities Review</i>, 7(1), 34-49.</li>
-                        </ul>
-                    </div>
-                    <div id="methodology" class="tab-card" style="display:none;">
-                        <h3>Methodologies</h3>
-                        <p>
-                            The development of the bussync Bus System followed a structured methodology:
-                        </p>
-                        <ol>
-                            <li><b>Requirement Analysis:</b> Stakeholder interviews and surveys were conducted to identify key needs and pain points in current bus management systems.</li>
-                            <li><b>System Design:</b> The architecture was designed using modular principles, enabling scalability and integration with third-party APIs for real-time tracking and ticketing.</li>
-                            <li><b>Implementation:</b> The frontend was built with React and Vite, while backend APIs were developed in Node.js. Real-time features leveraged WebSocket technology.</li>
-                            <li><b>Testing:</b> Unit and integration tests were performed to ensure reliability. User acceptance testing (UAT) was conducted with a pilot group.</li>
-                            <li><b>Deployment:</b> The system was deployed on a cloud platform with continuous monitoring and feedback collection for iterative improvement.</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>bussync Bus System is designed to revolutionize public transportation with modern technology and user-friendly features.</p>
-            <div class="drive-links">
-                <h3>Project Resources</h3>
-                <ul>
-                    <li><a href="#" target="_blank">Project Proposal (Google Drive link)</a></li>
-                    <li><a href="#" target="_blank">Research Paper (Google Drive link)</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section id="features">
-        <div class="container">
-            <h2>Features</h2>
-            <ul class="features-list">
-                <li>Real-time bus tracking</li>
-                <li>Route optimization</li>
-                <li>Mobile ticketing</li>
-                <li>Passenger analytics</li>
+
+        <!-- Mobile Drawer -->
+        <div class="mobile-drawer" id="mobileDrawer">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item"><a href="#Home">Home</a></li>
+                <li class="mobile-nav-item">
+                    <button class="mobile-accordion-btn" id="mobileDomainBtn">
+                        Domain
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <ul class="mobile-sub-menu" id="mobileDomainMenu">
+                        <li><a href="#Literature">Literature Survey</a></li>
+                        <li><a href="#Problem">Research Problem</a></li>
+                        <li><a href="#Gap">Research Gap</a></li>
+                        <li><a href="#Objectives">Research Objectives</a></li>
+                        <li><a href="#Methodology">Methodology</a></li>
+                        <li><a href="#Technologies">Technologies Used</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-nav-item"><a href="#Milestones">Milestones</a></li>
+                <li class="mobile-nav-item"><a href="#Documents">Documents</a></li>
+                <li class="mobile-nav-item"><a href="#Presentations">Presentations</a></li>
+                <li class="mobile-nav-item"><a href="#About">About us</a></li>
+                <li class="mobile-nav-item"><a href="#Contact">Contact us</a></li>
             </ul>
         </div>
-    </section>
-    <section id="contact">
+    </nav>
+
+    <!-- ─── SECTION 1: HOME (#Home) ───────────────────────────────────────────── -->
+    <section id="Home">
         <div class="container">
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+            <div class="home-grid">
+                <div class="home-content">
+                    <h1>
+                        Discover <span class="text-highlight-1">Smarter Transit Infotainment</span><br>
+                        with <span class="text-highlight-2">BusSync</span>
+                    </h1>
+                    <p class="home-description">
+                        An edge-hosted, offline multimedia content delivery and localized advertising platform engineered specifically for intercity buses. Operating seamlessly over an onboard Raspberry Pi 4 local Wi-Fi network without cellular reliance.
+                    </p>
+                    <p class="home-quote">
+                        "Smarter transit infotainment begins with zero cellular dependence."
+                    </p>
+                    <div class="home-actions">
+                        <a href="#Domain" class="btn btn-primary">
+                            Explore Research
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7l7 7-7 7"></path></svg>
+                        </a>
+                        <a href="#Documents" class="btn btn-outline">
+                            View Deliverables
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="home-visual-card">
+                    <div class="home-card-header">
+                        <div>
+                            <h3 style="color: #FFFFFF; font-size: 1.15rem; font-weight: 700; margin-bottom: 2px;">BusSync Edge Core</h3>
+                            <p style="color: #94A3B8; font-size: 0.8rem;">Onboard Raspberry Pi 4 Node</p>
+                        </div>
+                        <div class="status-badge">
+                            <span class="status-pulse"></span>
+                            Live &amp; Active
+                        </div>
+                    </div>
+                    <div class="tech-spec-list">
+                        <div class="tech-spec-item">
+                            <div class="spec-icon">⚡</div>
+                            <div class="spec-info">
+                                <h4>Sub-200ms Latency</h4>
+                                <p>FastAPI asynchronous chunk streaming engine</p>
+                            </div>
+                        </div>
+                        <div class="tech-spec-item">
+                            <div class="spec-icon">📶</div>
+                            <div class="spec-info">
+                                <h4>Zero Cellular Data Cost</h4>
+                                <p>100% localized captive Wi-Fi content delivery</p>
+                            </div>
+                        </div>
+                        <div class="tech-spec-item">
+                            <div class="spec-icon">👥</div>
+                            <div class="spec-info">
+                                <h4>60+ Concurrent Commuters</h4>
+                                <p>Fair Usage Policy (FUP) token-bucket allocation</p>
+                            </div>
+                        </div>
+                        <div class="tech-spec-item">
+                            <div class="spec-icon">🎯</div>
+                            <div class="spec-info">
+                                <h4>Location-Aware Ad Engine</h4>
+                                <p>ML-powered route direction &amp; merchant geofencing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <footer>
+
+    <!-- ─── SECTION 2: DOMAIN (#Domain) ───────────────────────────────────────── -->
+    <section id="Domain">
         <div class="container">
-            <p>&copy; 2026 bussync Bus System. All rights reserved.</p>
+            
+            <!-- Subsection 1: Literature Survey (#Literature) -->
+            <div id="Literature" class="sub-section">
+                <h2 class="domain-section-title sub-title-indigo">Literature Survey</h2>
+                <div class="lit-card">
+                    <p class="lit-text">
+                        The provision of in-transit passenger entertainment and information systems has seen substantial evolution from traditional broadcast media toward edge-driven localized networks. In Sri Lanka, intercity bus transportation is a critical public mobility backbone; however, following the Ministry of Transport’s strict January 2020 regulatory ban on loud public audio, traditional collective entertainment has been eliminated. While cellular infotainment systems have emerged globally, they suffer severe shortcomings along intercity routes due to frequent cellular dead zones, unpredictable handoffs, and prohibitive recurring mobile bandwidth costs.
+                    </p>
+                    <p class="lit-text">
+                        Prior investigations into vehicular ad-hoc networks (VANETs) and edge caching—such as Misra et al. [1] and Gouglidis et al. [2]—demonstrated the feasibility of local wireless content distribution, yet remained constrained by hardware cost or lack of dynamic fair bandwidth allocation. Similarly, studies on transit advertising (Murakami &amp; Kimura [10], Shinde et al. [11]) emphasize that passenger engagement increases significantly with localized relevance, yet conventional systems rely on static billboards or cloud-connected GPS feeds that fail during offline segments. In contrast, BusSync synthesizes edge-hosted HLS streaming, token-bucket Fair Usage Policies (UCON-based, Park &amp; Sandhu [6]), and lightweight offline machine learning to deliver individual, regulation-compliant entertainment without external internet connectivity.
+                    </p>
+                    <h4 class="references-title">IEEE References:</h4>
+                    <ol class="references-list">
+                        <li>S. Misra, S. Goswami, and C. Roy, "Opportunistic Content Distribution in Transit Vehicular Networks," <em>IEEE Transactions on Vehicular Technology</em>, 2021.</li>
+                        <li>A. Gouglidis and T. Spyropoulos, "Edge Caching and Prefetching for Public Transit Passenger Services," <em>IEEE Access</em>, vol. 9, 2021.</li>
+                        <li>P. K. Sahoo and W. C. Lin, "Fair Bandwidth Allocation for Wireless In-Bus Entertainment Systems," <em>IEEE Transactions on Network and Service Management</em>, 2020.</li>
+                        <li>C. Chang and K. Shin, "Lightweight Media Streaming Over Local Wi-Fi for Low-Cost Micro-Servers," <em>IEEE/ACM Transactions on Networking</em>, 2022.</li>
+                        <li>J. Park and R. Sandhu, "The Usage Control (UCON) Model for Continuous Access Authorization," <em>ACM Transactions on Information and System Security</em>, 2002.</li>
+                        <li>G. Akand et al., "Proof-of-Location and Physical Presence Verification in Public Transit Systems," <em>IEEE Access</em>, vol. 11, 2023.</li>
+                        <li>M. Murakami and T. Kimura, "Context-Aware Dynamic Advertising in Transportation Facilities," <em>IEEE Transactions on Intelligent Transportation Systems</em>, 2024.</li>
+                        <li>P. Shinde et al., "Location-Based Ad Insertion in Public Transit Systems," <em>IEEE International Conference on Smart City Innovations</em>, 2015.</li>
+                        <li>H. Malhotra, "Evaluating Commuter Satisfaction Under Personalized In-Bus Infotainment," <em>Transportation Research Part F</em>, 2020.</li>
+                        <li>D. Madleňák et al., "The Impact of Transit Noise Regulations on Commuter Wellbeing," <em>Procedia Engineering</em>, 2014.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Subsection 2: Research Problem (#Problem) -->
+            <div id="Problem" class="sub-section">
+                <h2 class="domain-section-title sub-title-yellow">Research Problem</h2>
+                <div class="problem-grid">
+                    <div class="problem-card">
+                        <h3>1. Sri Lanka January 2020 Audio Noise Ban</h3>
+                        <p>The Ministry of Transport enacted a total prohibition on loud in-bus sound systems, leaving millions of daily long-distance commuters without any entertainment while eliminating bus operators' traditional broadcast channel.</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>2. Cellular Dead Zones &amp; Prohibitive Bandwidth Costs</h3>
+                        <p>High-speed cellular internet along Sri Lankan highways and mountain passes suffers severe dead zones. Cellular data plans are economically unfeasible for transit operators streaming high-definition video to 60+ passengers.</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>3. Static Commercial Billboards &amp; Untargeted Ads</h3>
+                        <p>Transit advertising is predominantly static and unpersonalized. Local vendors situated along intermediate route segments cannot target passengers approaching their geographical vicinity without costly cloud infrastructure.</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>4. Bandwidth Monopolization &amp; Lack of Fair Usage (FUP)</h3>
+                        <p>Unregulated open Wi-Fi hotspots suffer rapid throughput collapse when a single commuter streams large 4K files, starving adjacent passengers and leading to high latency, buffering, and degraded user experience.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subsection 3: Research Gap (#Gap) -->
+            <div id="Gap" class="sub-section">
+                <h2 class="domain-section-title sub-title-emerald">Research Gap</h2>
+                <div class="gap-grid">
+                    <div class="gap-card">
+                        <div class="gap-icon">📶</div>
+                        <h3>Offline Edge Content Delivery</h3>
+                        <p>Existing transit platforms rely on continuous cellular towers; BusSync functions completely offline with onboard local micro-caching.</p>
+                    </div>
+                    <div class="gap-card">
+                        <div class="gap-icon">⚖️</div>
+                        <h3>Dynamic Fair Usage (FUP)</h3>
+                        <p>Conventional Wi-Fi lacks fairness; BusSync introduces a token-bucket rate limiter that throttles heavy streams to preserve 60+ streams.</p>
+                    </div>
+                    <div class="gap-card">
+                        <div class="gap-icon">📍</div>
+                        <h3>Geofenced Context-Aware Ads</h3>
+                        <p>Traditional bus ads are static; BusSync executes offline machine learning route direction and GPS geofenced commercial insertion.</p>
+                    </div>
+                    <div class="gap-card">
+                        <div class="gap-icon">🔒</div>
+                        <h3>Zero-Install PWA &amp; Security</h3>
+                        <p>Eliminates friction of downloading app store applications; runs immediately in any mobile browser with DRM chunk encryption.</p>
+                    </div>
+                </div>
+
+                <!-- Exact Comparative Matrix Table from Paper Table I -->
+                <div class="matrix-container">
+                    <div class="matrix-header">
+                        <h4>Table I. Research Gap Comparative Matrix (From ICAC 2026 Paper)</h4>
+                    </div>
+                    <div class="table-scroll">
+                        <table class="gap-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature / Research Aspect</th>
+                                    <th class="center">Misra et al. [1]</th>
+                                    <th class="center">Gouglidis et al. [2]</th>
+                                    <th class="center">Chang et al. [4]</th>
+                                    <th class="center highlight-col">Proposed BusSync System</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Offline Content Access</strong></td>
+                                    <td class="center text-success">✓</td>
+                                    <td class="center text-danger">✕</td>
+                                    <td class="center text-danger">✕</td>
+                                    <td class="center text-success"><strong>✓ (Zero Cellular Dependence)</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Multimedia Local Delivery</strong></td>
+                                    <td class="center text-success">✓</td>
+                                    <td class="center text-success">✓</td>
+                                    <td class="center text-danger">✕</td>
+                                    <td class="center text-success"><strong>✓ (FastAPI HLS Chunk Streaming)</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Offline Interactive Services</strong></td>
+                                    <td class="center text-danger">✕</td>
+                                    <td class="center text-danger">✕</td>
+                                    <td class="center text-danger">✕</td>
+                                    <td class="center text-success"><strong>✓ (News, Travel Tips, Feedback)</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Location-Aware Ad Insertion</strong></td>
+                                    <td class="center text-danger">✕</td>
+                                    <td class="center text-danger">✕</td>
+                                    <td class="center text-danger">✕</td>
+                                    <td class="center text-success"><strong>✓ (ML City &amp; Direction Predictor)</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Dynamic Fair Usage Policy (FUP)</strong></td>
+                                    <td class="center text-danger">✕</td>
+                                    <td class="center text-danger">✕</td>
+                                    <td class="center text-danger">✕</td>
+                                    <td class="center text-success"><strong>✓ (Token-Bucket Session Limiter)</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Regulation Compliance (No Speaker Audio)</strong></td>
+                                    <td class="center text-danger">✕</td>
+                                    <td class="center text-danger">✕</td>
+                                    <td class="center text-danger">✕</td>
+                                    <td class="center text-success"><strong>✓ (Complies with 2020 Noise Ban)</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subsection 4: Research Objectives (#Objectives) -->
+            <div id="Objectives" class="sub-section">
+                <h2 class="domain-section-title sub-title-green">Research Objectives</h2>
+                <div class="objectives-timeline">
+                    <div class="objective-item left">
+                        <div class="objective-marker">★</div>
+                        <div class="objective-card">
+                            <h3>1. Edge-Hosted Multimedia Streaming Engine</h3>
+                            <p>Develop an ultra-low latency FastAPI asynchronous media chunk delivery engine hosted on a local Raspberry Pi 4 edge node, achieving sub-200ms TTFB for 60+ concurrent commuters without cellular connectivity.</p>
+                        </div>
+                    </div>
+                    <div class="objective-item right">
+                        <div class="objective-marker">★</div>
+                        <div class="objective-card">
+                            <h3>2. Context-Aware &amp; Directional Ad Scheduling</h3>
+                            <p>Construct a lightweight machine learning city and route direction prediction algorithm that analyzes offline GPS coordinates to deliver hyper-targeted promotional video snippets for local merchants.</p>
+                        </div>
+                    </div>
+                    <div class="objective-item left">
+                        <div class="objective-marker">★</div>
+                        <div class="objective-card">
+                            <h3>3. Dynamic Fair Usage Policy (FUP) Throttling</h3>
+                            <p>Implement a token-bucket session bandwidth rate-limiter and Usage Control (UCON) model that actively prevents bandwidth hogging and guarantees equal streaming quality across all connected passengers.</p>
+                        </div>
+                    </div>
+                    <div class="objective-item right">
+                        <div class="objective-marker">★</div>
+                        <div class="objective-card">
+                            <h3>4. Zero-Install Passenger Portal &amp; Anonymous Analytics</h3>
+                            <p>Deploy a lightweight, responsive captive-portal React PWA with bilingual Sinhala/English support, enabling zero-install access to daily news, travel tips, and anonymous commute feedback stored locally.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subsection 5: Methodology (#Methodology) -->
+            <div id="Methodology" class="sub-section">
+                <h2 class="domain-section-title sub-title-purple">Methodology</h2>
+                <div class="methodology-grid">
+                    <div class="methodology-diagram-card">
+                        <div class="diagram-tier">
+                            <div class="diagram-tier-header">
+                                <span class="diagram-tier-title">Tier 1: Passenger Interaction Layer</span>
+                                <span class="diagram-tier-badge">Client Portal</span>
+                            </div>
+                            <p class="diagram-tier-desc">Zero-install React PWA, captive portal auto-detection, video playback, bilingual UI.</p>
+                        </div>
+                        <div class="diagram-tier">
+                            <div class="diagram-tier-header">
+                                <span class="diagram-tier-title">Tier 2: Edge Processing &amp; Services Layer</span>
+                                <span class="diagram-tier-badge">Micro-Services</span>
+                            </div>
+                            <p class="diagram-tier-desc">FastAPI asynchronous router, HLS media chunker, ML ad scheduling, token-bucket FUP.</p>
+                        </div>
+                        <div class="diagram-tier">
+                            <div class="diagram-tier-header">
+                                <span class="diagram-tier-title">Tier 3: Hardware &amp; Local Storage Layer</span>
+                                <span class="diagram-tier-badge">Onboard Node</span>
+                            </div>
+                            <p class="diagram-tier-desc">Raspberry Pi 4 Model B (4GB/8GB RAM), high-endurance micro-SD/NVMe, dual-band Wi-Fi AP.</p>
+                        </div>
+                        <div class="diagram-tier">
+                            <div class="diagram-tier-header">
+                                <span class="diagram-tier-title">Tier 4: Depo Terminal Synchronization</span>
+                                <span class="diagram-tier-badge">Depot Gateway</span>
+                            </div>
+                            <p class="diagram-tier-desc">Batch rsync synchronization of news digests, new movie releases, and advertiser billing logs.</p>
+                        </div>
+                    </div>
+
+                    <div class="methodology-text-card">
+                        <p>
+                            BusSync utilizes a modular 4-tier edge architecture engineered specifically to withstand the harsh vibrational, power-fluctuating, and disconnected operating environment of Sri Lankan intercity transit buses.
+                        </p>
+                        <p>
+                            When a passenger boards, their mobile phone automatically discovers the onboard Wi-Fi access point ("BusSync_WiFi"). The captive portal triggers the responsive React PWA without requiring app store installations. Media requests are handled by an asynchronous FastAPI backend running on a Raspberry Pi 4 edge computer, which streams pre-chunked HLS video files from local storage.
+                        </p>
+                        <p>
+                            To prevent any passenger from monopolizing the shared Wi-Fi throughput, our dynamic token-bucket Fair Usage Policy (FUP) algorithm measures individual throughput consumption and throttles aggressive sessions. An offline Machine Learning classifier matches the current bus GPS coordinates against route waypoints to serve targeted local business ads.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subsection 6: Technologies Used (#Technologies) -->
+            <div id="Technologies" class="sub-section">
+                <h2 class="domain-section-title sub-title-sky">Technologies Used</h2>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap">🐍</div>
+                        <p class="tech-name">Python 3.11</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap">⚡</div>
+                        <p class="tech-name">FastAPI</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap">🍓</div>
+                        <p class="tech-name">Raspberry Pi 4</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap">⚛️</div>
+                        <p class="tech-name">React PWA</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap">🗄️</div>
+                        <p class="tech-name">SQLite</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap">🤖</div>
+                        <p class="tech-name">Scikit-Learn</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap">🐳</div>
+                        <p class="tech-name">Docker</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap">🎨</div>
+                        <p class="tech-name">Tailwind / CSS3</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap">🌐</div>
+                        <p class="tech-name">Nginx Proxy</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap">🎬</div>
+                        <p class="tech-name">HLS Streaming</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ─── SECTION 3: MILESTONES (#Milestones) ───────────────────────────────── -->
+    <section id="Milestones">
+        <div class="container">
+            <h2 class="section-heading-dark">Project Milestones</h2>
+            <p class="section-subtitle">
+                A timeline of key project milestones, academic deliverables, and progress tracking.
+            </p>
+
+            <div class="milestones-timeline">
+                <!-- Milestone 1 -->
+                <div class="milestone-item left">
+                    <div class="milestone-marker" style="background: #6366F1;"></div>
+                    <div class="milestone-card" style="border-top-color: #6366F1;">
+                        <span class="milestone-date-badge" style="background: #6366F1;">14 January 2026</span>
+                        <h3>Topic Assessment (TAF)</h3>
+                        <p>Initial research topic formulation addressing transit noise regulations, edge feasibility, and problem definition. Approved under Ref: R26-ISE-003.</p>
+                        <p class="milestone-marks"><a href="https://drive.google.com/file/d/1jDWDwdLz4mbHOcMSJ_fYmiGMu6y02oT2/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="color: #6366F1; font-weight: 700; text-decoration: underline;">View Assessment Document &rarr;</a></p>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 100%; background: linear-gradient(90deg, #6366F1, #8B5CF6);"></div>
+                        </div>
+                        <p class="progress-pct" style="color: #6366F1;">100% Completed</p>
+                    </div>
+                </div>
+
+                <!-- Milestone 2 -->
+                <div class="milestone-item right">
+                    <div class="milestone-marker" style="background: #0EA5E9;"></div>
+                    <div class="milestone-card" style="border-top-color: #0EA5E9;">
+                        <span class="milestone-date-badge" style="background: #0EA5E9;">16 March 2026</span>
+                        <h3>Project Proposal &amp; Charter</h3>
+                        <p>Formal proposal presentation and charter establishing system scope, hardware architecture, 14-paper literature survey, and timeline.</p>
+                        <p class="milestone-marks"><a href="https://docs.google.com/presentation/d/1afJNHfv6v7Jr8DAKfghy1cFQkRY3Zjqa/edit?usp=sharing&ouid=116735535137045964336&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" style="color: #0284C7; font-weight: 700; text-decoration: underline;">View Proposal Presentation &rarr;</a></p>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 100%; background: linear-gradient(90deg, #0EA5E9, #38BDF8);"></div>
+                        </div>
+                        <p class="progress-pct" style="color: #0EA5E9;">100% Completed</p>
+                    </div>
+                </div>
+
+                <!-- Milestone 3 -->
+                <div class="milestone-item left">
+                    <div class="milestone-marker" style="background: #14B8A6;"></div>
+                    <div class="milestone-card" style="border-top-color: #14B8A6;">
+                        <span class="milestone-date-badge" style="background: #14B8A6;">11 May 2026</span>
+                        <h3>Progress Presentation I (PP1)</h3>
+                        <p>Demonstration of 50% system implementation: local Raspberry Pi 4 Wi-Fi hotspot captive portal, SQLite schemas, and FastAPI chunk throughput.</p>
+                        <p class="milestone-marks"><a href="https://docs.google.com/presentation/d/1gnmOO3i5Yhp1kXcaAdUNxYwZaQLJMx9D/edit?usp=sharing&ouid=116735535137045964336&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" style="color: #0D9488; font-weight: 700; text-decoration: underline;">View PP1 Slide Deck &rarr;</a></p>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 100%; background: linear-gradient(90deg, #14B8A6, #2DD4BF);"></div>
+                        </div>
+                        <p class="progress-pct" style="color: #14B8A6;">100% Completed</p>
+                    </div>
+                </div>
+
+                <!-- Milestone 4 -->
+                <div class="milestone-item right">
+                    <div class="milestone-marker" style="background: #F59E0B;"></div>
+                    <div class="milestone-card" style="border-top-color: #F59E0B;">
+                        <span class="milestone-date-badge" style="background: #F59E0B;">31 August 2026</span>
+                        <h3>Progress Presentation II (PP2)</h3>
+                        <p>Demonstration of 90% project completion: ML route prediction model, geofenced ad scheduler, and Fair Usage Policy (FUP) token-bucket allocation.</p>
+                        <p class="milestone-marks"><a href="https://docs.google.com/presentation/d/1jzj13eBYogxrvlQnitgaZB8FT73fg4PP/edit?usp=sharing&ouid=116735535137045964336&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" style="color: #D97706; font-weight: 700; text-decoration: underline;">View PP2 Slide Deck &rarr;</a></p>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 100%; background: linear-gradient(90deg, #F59E0B, #FBBF24);"></div>
+                        </div>
+                        <p class="progress-pct" style="color: #F59E0B;">100% Completed</p>
+                    </div>
+                </div>
+
+                <!-- Milestone 5 -->
+                <div class="milestone-item left">
+                    <div class="milestone-marker" style="background: #8B5CF6;"></div>
+                    <div class="milestone-card" style="border-top-color: #8B5CF6;">
+                        <span class="milestone-date-badge" style="background: #8B5CF6;">23 October 2026</span>
+                        <h3>Research Paper Submission</h3>
+                        <p>Submission of the completed 6-page IEEE format research paper to the ICAC 2026 International Conference, alongside final project chapters.</p>
+                        <p class="milestone-marks"><a href="https://drive.google.com/file/d/1F-iodNDWH4M0Krb0Itgq_wvdtT3Odc9C/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="color: #8B5CF6; font-weight: 700; text-decoration: underline;">View Research Paper &rarr;</a></p>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 100%; background: linear-gradient(90deg, #8B5CF6, #A78BFA);"></div>
+                        </div>
+                        <p class="progress-pct" style="color: #8B5CF6;">100% Completed</p>
+                    </div>
+                </div>
+
+                <!-- Milestone 6 -->
+                <div class="milestone-item right">
+                    <div class="milestone-marker" style="background: #10B981;"></div>
+                    <div class="milestone-card" style="border-top-color: #10B981;">
+                        <span class="milestone-date-badge" style="background: #10B981;">19 October 2026</span>
+                        <h3>Final Presentation &amp; Defense</h3>
+                        <p>Final project delivery with live Raspberry Pi 4 edge demonstration, passenger trial evaluation metrics, research conclusions, and viva voce defense.</p>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 85%; background: linear-gradient(90deg, #10B981, #34D399);"></div>
+                        </div>
+                        <p class="progress-pct" style="color: #10B981;">Upcoming Defense</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── SECTION 4: DOCUMENTS (#Documents) ───────────────────────────────── -->
+    <section id="Documents">
+        <div class="container">
+            <h2 class="section-heading-blue">Documents</h2>
+            <p class="section-subtitle">
+                This section lists all documents related to your academic project. Use the preview button to view submitted files.
+            </p>
+
+            <div class="cards-grid-3">
+                <!-- Document 1: Topic Assessment Form -->
+                <div class="doc-card">
+                    <div class="doc-card-top">
+                        <div class="doc-title-row">
+                            <svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            <h3 class="doc-title">Topic Assessment (TAF)</h3>
+                        </div>
+                        <p class="doc-desc">Approved Topic Assessment Form outlining project eligibility, transit noise context, and supervisor signatures (Ref: R26-ISE-003).</p>
+                        <p class="doc-status">Submitted on 2026/01/14 &bull; Approved</p>
+                    </div>
+                    <div class="doc-card-bottom">
+                        <span class="doc-type-badge">Group</span>
+                        <div class="doc-links">
+                            <a href="https://drive.google.com/file/d/1jDWDwdLz4mbHOcMSJ_fYmiGMu6y02oT2/view?usp=sharing" class="btn-preview" target="_blank" rel="noopener noreferrer">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                Preview
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document 2: Project Proposal Documents -->
+                <div class="doc-card">
+                    <div class="doc-card-top">
+                        <div class="doc-title-row">
+                            <svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            <h3 class="doc-title">Project Proposal Documents</h3>
+                        </div>
+                        <p class="doc-desc">Official project proposals documenting literature review, system architecture, and individual 4-tier methodologies.</p>
+                        <p class="doc-status">Submitted on 2026/03/15 &bull; Evaluated</p>
+                    </div>
+                    <div class="doc-card-bottom">
+                        <span class="doc-type-badge">Group &bull; Individual</span>
+                        <div class="doc-links">
+                            <a href="https://drive.google.com/drive/folders/1iMaRvI-1coRMqeB-nS_2YP_HYePZFlxP?usp=sharing" class="btn-preview" target="_blank" rel="noopener noreferrer">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                Preview
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document 3: Software Requirement Document (SRS) -->
+                <div class="doc-card">
+                    <div class="doc-card-top">
+                        <div class="doc-title-row">
+                            <svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                            <h3 class="doc-title">Software Requirement Document (SRS)</h3>
+                        </div>
+                        <p class="doc-desc">IEEE 830-compliant Software Requirements Specification detailing functional requirements, non-functional constraints, and edge architecture.</p>
+                        <p class="doc-status">Submitted on 2026/05/11 &bull; Verified</p>
+                    </div>
+                    <div class="doc-card-bottom">
+                        <span class="doc-type-badge">Group</span>
+                        <div class="doc-links">
+                            <a href="https://drive.google.com/file/d/1Pymzgsz1Sb1hD4TqKxH2Km2koWAGNum4/view?usp=sharing" class="btn-preview" target="_blank" rel="noopener noreferrer">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                Preview
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document 4: Check List Documents -->
+                <div class="doc-card">
+                    <div class="doc-card-top">
+                        <div class="doc-title-row">
+                            <svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                            <h3 class="doc-title">Check List Documents</h3>
+                        </div>
+                        <p class="doc-desc">Official milestone evaluation checklists and departmental submission compliance forms confirming academic clearance.</p>
+                        <p class="doc-status">Submitted on 2026/10/14 &bull; Academic Compliance</p>
+                    </div>
+                    <div class="doc-card-bottom">
+                        <span class="doc-type-badge">Group &bull; Compliance</span>
+                        <div class="doc-links">
+                            <a href="https://drive.google.com/drive/folders/1-PhevUDNOC57_c2YNwUpVkhjIPG-eFEq?usp=sharing" class="btn-preview" target="_blank" rel="noopener noreferrer">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                Preview
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document 5: Research Paper -->
+                <div class="doc-card">
+                    <div class="doc-card-top">
+                        <div class="doc-title-row">
+                            <svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                            <h3 class="doc-title">Research Paper</h3>
+                        </div>
+                        <p class="doc-desc">Official 6-page IEEE manuscript submitted to ICAC 2026 titled "Intelligent Multimedia Content Delivery Device For Intercity Buses".</p>
+                        <p class="doc-status">Submitted on 2026/10/23 &bull; Peer-Reviewed</p>
+                    </div>
+                    <div class="doc-card-bottom">
+                        <span class="doc-type-badge">Group</span>
+                        <div class="doc-links">
+                            <a href="https://drive.google.com/file/d/1F-iodNDWH4M0Krb0Itgq_wvdtT3Odc9C/view?usp=sharing" class="btn-preview" target="_blank" rel="noopener noreferrer">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                Preview
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document 6: Final Thesis Document -->
+                <div class="doc-card">
+                    <div class="doc-card-top">
+                        <div class="doc-title-row">
+                            <svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><line x1="9" y1="7" x2="15" y2="7"></line><line x1="9" y1="11" x2="13" y2="11"></line></svg>
+                            <h3 class="doc-title">Final Thesis Document</h3>
+                        </div>
+                        <p class="doc-desc">Comprehensive group final research report consolidating complete hardware edge design, captive portal protocols, evaluation benchmarks, and findings.</p>
+                        <p class="doc-status">Submitted on 2026/10/11 &bull; Final Defense on 2026/10/28</p>
+                    </div>
+                    <div class="doc-card-bottom">
+                        <span class="doc-type-badge">Group &bull; Thesis</span>
+                        <div class="doc-links">
+                            <a href="https://drive.google.com/drive/folders/12rpUkF4lNUghc5hEPhjEhP1RDDlNLpbp?usp=sharing" class="btn-preview" target="_blank" rel="noopener noreferrer">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                Preview
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document 7: Final Individual Thesis Documents -->
+                <div class="doc-card">
+                    <div class="doc-card-top">
+                        <div class="doc-title-row">
+                            <svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            <h3 class="doc-title">Final Individual Thesis Documents</h3>
+                        </div>
+                        <p class="doc-desc">Individual research dissertation chapters documenting distinct algorithmic contributions, edge streaming benchmarks, and individual component evaluations.</p>
+                        <p class="doc-status">Submitted on 2026/10/11 &bull; Final Defense on 2026/10/28</p>
+                    </div>
+                    <div class="doc-card-bottom">
+                        <span class="doc-type-badge">Individual &bull; Thesis</span>
+                        <div class="doc-links">
+                            <a href="https://drive.google.com/drive/folders/1Z10dyoyiRjCJl6oFLmCwiooxY3wSg9Mi?usp=sharing" class="btn-preview" target="_blank" rel="noopener noreferrer">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                Preview
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── SECTION 5: PRESENTATIONS (#Presentations) ─────────────────────────── -->
+    <section id="Presentations">
+        <div class="container">
+            <h2 class="section-heading-sky">Presentations</h2>
+            <p class="section-subtitle">
+                Below are all the submitted presentation materials related to this project.
+            </p>
+
+            <div class="cards-grid-2">
+                <!-- Presentation 1: Proposal Presentation -->
+                <div class="presentation-card">
+                    <div class="doc-card-top">
+                        <div class="doc-title-row">
+                            <svg class="pres-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            <h3 class="doc-title">Proposal Presentation</h3>
+                        </div>
+                        <p class="doc-desc">Formal proposal defense presentation introducing research problem formulation, hardware feasibility, and individual 4-tier methodology.</p>
+                        <p class="doc-status">Submitted on 2026/03/16 &bull; Defended &bull; Ref: RP26-ISE-003</p>
+                    </div>
+                    <div class="doc-card-bottom">
+                        <span class="doc-type-badge">Group &bull; Presentation</span>
+                        <div class="doc-links">
+                            <a href="https://docs.google.com/presentation/d/1afJNHfv6v7Jr8DAKfghy1cFQkRY3Zjqa/edit?usp=sharing&ouid=116735535137045964336&rtpof=true&sd=true" class="btn-preview pres" target="_blank" rel="noopener noreferrer">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                Preview
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Presentation 2: PP1 -->
+                <div class="presentation-card">
+                    <div class="doc-card-top">
+                        <div class="doc-title-row">
+                            <svg class="pres-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            <h3 class="doc-title">Progress Presentation I (PP1)</h3>
+                        </div>
+                        <p class="doc-desc">Presents approximately 50% completion, showcasing FastAPI edge streaming chunks, captive portal, and received supervisor feedback.</p>
+                        <p class="doc-status">Submitted on 2026/05/11 &bull; Defended &bull; Ref: RP26-ISE-003</p>
+                    </div>
+                    <div class="doc-card-bottom">
+                        <span class="doc-type-badge">Group &bull; Presentation</span>
+                        <div class="doc-links">
+                            <a href="https://docs.google.com/presentation/d/1gnmOO3i5Yhp1kXcaAdUNxYwZaQLJMx9D/edit?usp=sharing&ouid=116735535137045964336&rtpof=true&sd=true" class="btn-preview pres" target="_blank" rel="noopener noreferrer">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                Preview
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Presentation 3: PP2 -->
+                <div class="presentation-card">
+                    <div class="doc-card-top">
+                        <div class="doc-title-row">
+                            <svg class="pres-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            <h3 class="doc-title">Progress Presentation II (PP2)</h3>
+                        </div>
+                        <p class="doc-desc">Highlights around 90% project completion, refined ML route prediction design, geofenced ad scheduler, and Fair Usage Policy testing outcomes.</p>
+                        <p class="doc-status">Submitted on 2026/08/31 &bull; Defended &bull; Ref: R26-ISE-003-PP2</p>
+                    </div>
+                    <div class="doc-card-bottom">
+                        <span class="doc-type-badge">Group &bull; Presentation</span>
+                        <div class="doc-links">
+                            <a href="https://docs.google.com/presentation/d/1jzj13eBYogxrvlQnitgaZB8FT73fg4PP/edit?usp=sharing&ouid=116735535137045964336&rtpof=true&sd=true" class="btn-preview pres" target="_blank" rel="noopener noreferrer">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                Preview
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Presentation 4: Final Presentation -->
+                <div class="presentation-card">
+                    <div class="doc-card-top">
+                        <div class="doc-title-row">
+                            <svg class="pres-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            <h3 class="doc-title">Final Presentation &amp; Defense</h3>
+                        </div>
+                        <p class="doc-desc">Comprehensive final defense slide presentation highlighting full system realization, passenger trials, results analysis, and viva defense.</p>
+                        <p class="doc-status">Submitted on 2026/10/19 &bull; Pending Defense &bull; Ref: R26-ISE-003</p>
+                    </div>
+                    <div class="doc-card-bottom">
+                        <span class="doc-type-badge">Group &bull; Presentation</span>
+                        <div class="doc-links">
+                            <span class="badge-pending">
+                                <span class="badge-pending-dot"></span>
+                                Pending
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── SECTION 6: ABOUT US (#About) ─────────────────────────────────────── -->
+    <section id="About">
+        <div class="container">
+            <h2 class="domain-section-title sub-title-indigo" style="color: #2563EB;">Meet Our Team</h2>
+
+            <!-- Supervisors Subsection -->
+            <h3 class="about-subheading">Supervisors</h3>
+            <div class="supervisors-row">
+                <!-- Supervisor 1 -->
+                <div class="team-card supervisor-card-width">
+                    <div class="team-avatar-banner" style="background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);">
+                        <img src="assets/team/sanjeeva.jpg" alt="Mr. Sanjeeva Perera" class="avatar-initials-circle">
+                    </div>
+                    <div class="team-card-body">
+                        <h3 class="team-name">Mr. Sanjeeva Perera</h3>
+                        <span class="role-badge-sup">Supervisor</span>
+                        <p class="team-affiliation">Sri Lanka Institute of Information Technology</p>
+                        <p class="team-dept">Department: <span>Computer Systems Engineering</span></p>
+                    </div>
+                </div>
+
+                <!-- Supervisor 2 -->
+                <div class="team-card supervisor-card-width">
+                    <div class="team-avatar-banner" style="background: linear-gradient(135deg, #4338CA 0%, #6366F1 100%);">
+                        <img src="assets/team/narmada.jpg" alt="Ms. Narmada Gamage" class="avatar-initials-circle">
+                    </div>
+                    <div class="team-card-body">
+                        <h3 class="team-name">Ms. Narmada Gamage</h3>
+                        <span class="role-badge-sup" style="background: #0284C7;">Co-Supervisor</span>
+                        <p class="team-affiliation">Sri Lanka Institute of Information Technology</p>
+                        <p class="team-dept">Department: <span>Computer Systems Engineering</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student Team Subsection -->
+            <h3 class="about-subheading">Student Team</h3>
+            <div class="students-grid">
+                <!-- Member 1 -->
+                <div class="team-card">
+                    <div class="team-avatar-banner" style="background: linear-gradient(135deg, #0F766E 0%, #06B6D4 100%);">
+                        <img src="assets/team/thaveesha.jpg" alt="Thaveesha Samarasinghe" class="avatar-initials-circle">
+                    </div>
+                    <div class="team-card-body">
+                        <h3 class="team-name">Thaveesha Samarasinghe</h3>
+                        <span class="role-badge-lead">Team Leader</span>
+                        <span class="student-it-badge">IT22174758</span>
+                        <p class="team-affiliation">SLIIT - Faculty of Computing</p>
+                        <p class="team-dept">Department: <span>Computer Systems Engineering</span></p>
+                        <a href="mailto:it22174758@my.sliit.lk" class="student-email-pill" title="Send email to Thaveesha Samarasinghe">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            it22174758@my.sliit.lk
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="team-card">
+                    <div class="team-avatar-banner" style="background: linear-gradient(135deg, #1D4ED8 0%, #38BDF8 100%);">
+                        <img src="assets/team/lakshan.jpg" alt="Lakshan Soyza" class="avatar-initials-circle">
+                    </div>
+                    <div class="team-card-body">
+                        <h3 class="team-name">Lakshan Soyza</h3>
+                        <span class="role-badge-member">Team Member</span>
+                        <span class="student-it-badge">IT22640420</span>
+                        <p class="team-affiliation">SLIIT - Faculty of Computing</p>
+                        <p class="team-dept">Department: <span>Computer Systems Engineering</span></p>
+                        <a href="mailto:it22640420@my.sliit.lk" class="student-email-pill" title="Send email to Lakshan Soyza">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            it22640420@my.sliit.lk
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="team-card">
+                    <div class="team-avatar-banner" style="background: linear-gradient(135deg, #4338CA 0%, #818CF8 100%);">
+                        <img src="assets/team/osuri.jpg" alt="Osuri Wickramaarachchi" class="avatar-initials-circle">
+                    </div>
+                    <div class="team-card-body">
+                        <h3 class="team-name">Osuri Wickramaarachchi</h3>
+                        <span class="role-badge-member">Team Member</span>
+                        <span class="student-it-badge">IT22154330</span>
+                        <p class="team-affiliation">SLIIT - Faculty of Computing</p>
+                        <p class="team-dept">Department: <span>Computer Systems Engineering</span></p>
+                        <a href="mailto:it22154330@my.sliit.lk" class="student-email-pill" title="Send email to Osuri Wickramaarachchi">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            it22154330@my.sliit.lk
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="team-card">
+                    <div class="team-avatar-banner" style="background: linear-gradient(135deg, #6D28D9 0%, #C084FC 100%);">
+                        <img src="assets/team/chamathka.jpg" alt="Chamathka Bandara" class="avatar-initials-circle">
+                    </div>
+                    <div class="team-card-body">
+                        <h3 class="team-name">Chamathka Bandara</h3>
+                        <span class="role-badge-member">Team Member</span>
+                        <span class="student-it-badge">IT22209566</span>
+                        <p class="team-affiliation">SLIIT - Faculty of Computing</p>
+                        <p class="team-dept">Department: <span>Computer Systems Engineering</span></p>
+                        <a href="mailto:it22209566@my.sliit.lk" class="student-email-pill" title="Send email to Chamathka Bandara">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            it22209566@my.sliit.lk
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ─── SECTION 7: CONTACT US (#Contact) ─────────────────────────────────── -->
+    <section id="Contact">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Left: Form -->
+                <div class="contact-form-box">
+                    <div class="contact-form-header">
+                        <h2 class="contact-gradient-title">Contact Us</h2>
+                        <p style="color: #64748B; font-size: 0.92rem;">Got a question? Send us a message and we’ll respond promptly.</p>
+                    </div>
+
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <svg class="form-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            <input type="text" name="name" class="form-field" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <svg class="form-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <input type="email" name="email" class="form-field" placeholder="Your Email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <svg class="form-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                            <textarea name="message" class="form-field" placeholder="Your Message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-send-message">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right: Contact Details -->
+                <div class="contact-info-panel">
+                    <h3>Contact Details</h3>
+                    <p class="contact-email-highlight">bussync.research@gmail.com</p>
+                    <p>We’d love to hear your feedback or answer any inquiries related to the project or research.</p>
+                    <p style="font-size: 0.88rem; color: #64748B;">
+                        <strong>Department Contact Lines:</strong><br>
+                        +94 11 754 4801 (SLIIT Computing Hotline)<br>
+                        Department of Computer Systems Engineering, Faculty of Computing, Sri Lanka Institute of Information Technology (SLIIT), Malabe, Sri Lanka.
+                    </p>
+                    <p class="team-signoff">— Team BusSync</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FOOTER ───────────────────────────────────────────────────────────── -->
+    <footer class="main-footer">
+        <div class="container">
+            <ul class="footer-nav">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Domain">Domain</a></li>
+                <li><a href="#Milestones">Milestones</a></li>
+                <li><a href="#Documents">Documents</a></li>
+                <li><a href="#Presentations">Presentations</a></li>
+                <li><a href="#About">About us</a></li>
+                <li><a href="#Contact">Contact us</a></li>
+            </ul>
+            <p class="footer-copy">
+                &copy; 2026 BusSync Research Initiative. Department of Computer Systems Engineering, Faculty of Computing, SLIIT. All Rights Reserved.
+            </p>
         </div>
     </footer>
+
+    <!-- ─── JAVASCRIPT LOGIC ────────────────────────────────────────────────── -->
+    <script src="script.js?v=20261011_05"></script>
 </body>
-<script>
-function showTab(tab) {
-    document.getElementById('literature').style.display = tab === 'literature' ? 'block' : 'none';
-    document.getElementById('methodology').style.display = tab === 'methodology' ? 'block' : 'none';
-    var btns = document.querySelectorAll('.tab-btn');
-    btns.forEach(function(btn) { btn.classList.remove('active'); });
-    if(tab === 'literature') btns[0].classList.add('active');
-    else btns[1].classList.add('active');
-}
-</script>
 </html>
