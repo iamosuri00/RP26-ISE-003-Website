@@ -1,12 +1,12 @@
 # BusSync — Intelligent Multimedia Transit Delivery Device
 
 [![SLIIT Research](https://img.shields.io/badge/SLIIT-Faculty%20of%20Computing-0A1F44?style=for-the-badge)](https://www.sliit.lk)
-[![Project Ref](https://img.shields.io/badge/Ref-RP26--ISE--003-4169E1?style=for-the-badge)](https://iamosuri00.github.io/RP26-ISE-003-Website/)
-[![GitHub Pages](https://img.shields.io/badge/Live%20Site-Deployed-10B981?style=for-the-badge)](https://iamosuri00.github.io/RP26-ISE-003-Website/)
+[![Project Ref](https://img.shields.io/badge/Ref-RP26--ISE--003-4169E1?style=for-the-badge)](https://rp26-ise-003-website.vercel.app)
+[![Vercel](https://img.shields.io/badge/Vercel-Live%20Site-000000?style=for-the-badge&logo=vercel)](https://rp26-ise-003-website.vercel.app)
 
 > **Official Research Project Website for SLIIT Special Honours Degree in Information Technology**  
 > **Project Reference:** `RP26-ISE-003` / `R26-ISE-003`  
-> 🌐 **Live Website:** [https://iamosuri00.github.io/RP26-ISE-003-Website/](https://iamosuri00.github.io/RP26-ISE-003-Website/)
+> 🌐 **Live Website (Vercel):** [https://rp26-ise-003-website.vercel.app](https://rp26-ise-003-website.vercel.app)
 
 ---
 
@@ -42,7 +42,7 @@ By integrating ambient noise monitoring, adaptive acoustic masking, offline edge
 ## 🛠 Technology Stack
 * **Structure:** Semantic HTML5
 * **Styling:** Vanilla CSS3 (Custom Design System, Glassmorphic UI, Responsive Flex/Grid)
-* **Hosting:** GitHub Pages
+* **Hosting:** Vercel (Continuous Deployment & Global Anycast CDN)
 * **Zero External Dependencies:** 100% lightweight and fast-loading
 
 ---
