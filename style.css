@@ -56,6 +56,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 72px;
     font-size: 16px;
 }
 
@@ -110,15 +111,16 @@ nav.main-nav {
     right: 0;
     width: 100%;
     z-index: 1000;
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
-    background: transparent;
-}
-
-nav.main-nav.scrolled {
-    background: rgba(10, 31, 68, 0.88);
+    background: rgba(10, 31, 68, 0.94);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background-color 0.3s ease;
+}
+
+nav.main-nav.scrolled {
+    background: rgba(10, 31, 68, 0.98);
 }
 
 .nav-inner {
@@ -239,7 +241,11 @@ nav.main-nav.scrolled {
     color: var(--royal-blue);
 }
 
-/* Mobile Toggle */
+/* Mobile Toggle (Pure CSS) */
+.mobile-nav-check {
+    display: none;
+}
+
 .mobile-nav-toggle {
     display: none;
     background: none;
@@ -247,6 +253,19 @@ nav.main-nav.scrolled {
     color: #FFFFFF;
     cursor: pointer;
     padding: 8px;
+    user-select: none;
+}
+
+.mobile-nav-toggle .icon-close {
+    display: none;
+}
+
+.mobile-nav-check:checked ~ .nav-inner .mobile-nav-toggle .icon-open {
+    display: none;
+}
+
+.mobile-nav-check:checked ~ .nav-inner .mobile-nav-toggle .icon-close {
+    display: block;
 }
 
 /* Mobile Menu Drawer */
@@ -263,7 +282,7 @@ nav.main-nav.scrolled {
     z-index: 999;
 }
 
-.mobile-drawer.open {
+.mobile-nav-check:checked ~ .mobile-drawer {
     display: block;
 }
 
@@ -289,6 +308,15 @@ nav.main-nav.scrolled {
     border: none;
     text-align: left;
     cursor: pointer;
+    list-style: none;
+}
+
+details.mobile-details summary::-webkit-details-marker {
+    display: none;
+}
+
+details.mobile-details[open] summary svg {
+    transform: rotate(180deg);
 }
 
 .mobile-nav-item a:hover,
@@ -298,14 +326,13 @@ nav.main-nav.scrolled {
 }
 
 .mobile-sub-menu {
-    display: none;
     list-style: none;
     padding-left: 16px;
     margin-top: 4px;
     border-left: 2px solid rgba(255, 255, 255, 0.15);
 }
 
-.mobile-sub-menu.open {
+details.mobile-details .mobile-sub-menu {
     display: block;
 }
 
